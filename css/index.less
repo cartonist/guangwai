@@ -1,0 +1,543 @@
+// @import "common";
+@no: 10;
+@fontsize: 99; //以990px固定大小
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?aas8bl');
+    src: url('../fonts/icomoon.eot?aas8bl#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?aas8bl') format('truetype'),
+        url('../fonts/icomoon.woff?aas8bl') format('woff'),
+        url('../fonts/icomoon.svg?aas8bl#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+@media screen and (min-width: 1200px) {
+    html {
+        font-size: 120px !important;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+li {
+    list-style: none;
+}
+
+input {
+    outline: none;
+    border: 0;
+}
+
+body {
+    width: 10rem;
+    margin: 0 auto;
+    font-size: (12rem / @fontsize) !important;
+
+    .nav-pro {
+        position: relative;
+        width: 100%;
+        height: (20rem / @fontsize);
+        // background-color: blue;
+
+        .language {
+            position: absolute;
+            top: (2rem / @fontsize);
+            left: 50%;
+            transform: translateX(-50%);
+            width: (128rem / @fontsize);
+            height: (20rem / @fontsize);
+            line-height: (20rem / @fontsize);
+            background-color: #3379b6;
+            color: #fff;
+
+            &:hover {
+                dd {
+                    display: block;
+                }
+            }
+
+            dt {
+
+                &::after {
+                    position: absolute;
+                    top: (1rem / @fontsize);
+                    right: (4rem / @fontsize);
+                    font-size: (12rem / @fontsize);
+                    font-family: 'icomoon';
+                    content: "\e906";
+                }
+            }
+
+            dd {
+                display: none;
+                background-color: #75a5d9;
+
+                &:nth-child(2) {
+                    a::after {
+                        font-family: 'icomoon';
+                        content: "\e906";
+                        display: block;
+                        text-align: center;
+                    }
+                }
+
+                &:hover {
+                    background-color: #338bf1;
+                }
+            }
+
+
+        }
+
+        .search {
+            display: flex;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: (300rem / @fontsize);
+            height: 100%;
+            // background-color: red;
+
+            a {
+                flex: 1;
+                height: (12rem / @fontsize);
+                margin-top: (4rem / @fontsize);
+
+                &:nth-child(1) {
+                    background: url(../img/nav-icon1.png) no-repeat;
+                    background-size: 100% 100%;
+                }
+
+                &:nth-child(2) {
+                    background: url(../img/nav-icon2.png) no-repeat;
+                    background-size: 100% 100%;
+                }
+
+                &:nth-child(3) {
+                    background: url(../img/nav-icon3.gif) no-repeat;
+                    background-size: 100% 100%;
+                }
+
+                &:nth-child(4) {
+                    background: url(../img/nav-icon4.gif) no-repeat;
+                    background-size: 100% 100%;
+                }
+            }
+        }
+    }
+
+    .header {
+        display: flex;
+        width: 100%;
+        height: (92rem / @fontsize);
+        background: url(../img/bg_head.jpg) no-repeat;
+        background-size: 100% 100%;
+
+        span {
+            flex: 1;
+            height: (92rem / @fontsize);
+
+            &:nth-child(1) {
+                // background-color: red;
+                position: relative;
+
+                a {
+                    position: absolute;
+                    width: (266rem / @fontsize);
+                    height: (66rem / @fontsize);
+                    top: (14rem / @fontsize);
+                    left: (10rem / @fontsize);
+                    background: url(../img/logo.jpg) no-repeat;
+                    background-size: 100% 100%;
+                }
+            }
+
+            &:nth-child(3) {
+                // background-color: red;
+                position: relative;
+
+                input {
+                    position: absolute;
+                    box-sizing: border-box;
+                    padding: 0 (20rem / @fontsize);
+                    width: (200rem / @fontsize);
+                    height: (20rem / @fontsize);
+                    bottom: (10rem / @fontsize);
+                    right: (20rem / @fontsize);
+                    border-radius: (10rem / @fontsize);
+                    box-shadow: inset (2rem / @fontsize) (2rem / @fontsize) rgba(0, 0, 0, .2);
+
+                }
+
+                &::after {
+                    position: absolute;
+                    font-family: 'icomoon';
+                    content: "\e986";
+                    bottom: (14rem / @fontsize);
+                    right: (26rem / @fontsize);
+
+                }
+            }
+        }
+    }
+
+    .nav {
+        @height: (45rem / @fontsize);
+        margin: 0 (10rem / @fontsize);
+        height: @height;
+        display: flex;
+        background: -webkit-linear-gradient(left, #57a1ea, #0764c2);
+
+        a {
+            flex: 1;
+            font-weight: 700;
+            font-size: (14rem / @fontsize);
+            text-align: center;
+            line-height: @height;
+        }
+    }
+
+    .bd {
+        margin: (5rem / @fontsize);
+        height: (540rem / @fontsize);
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 0 (4rem / @fontsize) (3rem / @fontsize) rgba(0, 0, 0, .2);
+
+        .main {
+            // margin: 5px;
+            // height: 480px;
+            flex: 90%;
+            display: flex;
+            // box-shadow: 0 0 4px 3px rgba(0, 0, 0, .2);
+
+            .left {
+                position: relative;
+                flex: 35%;
+                box-sizing: border-box;
+                margin: (3rem / @fontsize);
+                background: url(../uploads/gymnasium.jpg) no-repeat;
+                background-size: 100% 100%;
+
+                .bar {
+                    position: absolute;
+                    bottom: (10rem / @fontsize);
+                    right: (10rem / @fontsize);
+                    width: (80rem / @fontsize);
+                    height: (14rem / @fontsize);
+                    background-color: rgba(255, 255, 255, .3);
+                    border-radius: (7rem / @fontsize);
+
+                    li {
+                        float: left;
+                        margin: (2rem / @fontsize) (5rem / @fontsize);
+                        width: (10rem / @fontsize);
+                        height: (10rem / @fontsize);
+                        background-color: #fff;
+                        border-radius: (5rem / @fontsize);
+
+                        &:nth-child(2) {
+                            background-color: rgb(255, 123, 0);
+                        }
+
+                    }
+                }
+
+            }
+
+            .middle {
+                flex: 40%;
+                display: flex;
+                flex-direction: column;
+                box-sizing: border-box;
+                margin: (3rem / @fontsize) 0;
+                padding: (5rem / @fontsize);
+                border-right: (1rem / @fontsize) solid #ccc;
+
+                div {
+                    flex: 1;
+                    font-size: (12rem / @fontsize);
+                }
+
+                .news1,
+                .news2 {
+                    a {
+                        color: #000;
+                    }
+
+                    dt {
+                        position: relative;
+                        height: (30rem / @fontsize);
+                        font-weight: 700;
+                        line-height: (30rem / @fontsize);
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            width: (5rem / @fontsize);
+                            height: (10rem / @fontsize);
+                            top: (10rem / @fontsize);
+                            left: 0;
+                            background-color: #1c6ec2;
+                            border-radius: 50%;
+
+                        }
+
+                        span {
+                            padding-left: (8rem / @fontsize);
+                        }
+
+                        a {
+                            position: absolute;
+                            color: #000;
+                            font-weight: 400;
+                            top: 0;
+                            right: 0;
+                        }
+                    }
+
+                    dd {
+                        position: relative;
+                        height: (23rem / @fontsize);
+                        line-height: (23rem / @fontsize);
+                        font-size: (12rem / @fontsize);
+                        border-bottom: (1rem / @fontsize) solid #ccc;
+
+                        &::before {
+                            font-family: "icomoon";
+                            content: "\e908";
+                        }
+
+                        &::after {
+                            position: absolute;
+                            height: (23rem / @fontsize);
+                            top: 0;
+                            right: 0;
+                            content: "2022-10-4";
+                        }
+                    }
+                }
+            }
+
+            .right {
+                flex: 25%;
+                display: flex;
+                flex-direction: column;
+                box-sizing: border-box;
+                padding: (5rem / @fontsize);
+                margin: (3rem / @fontsize) 0;
+
+                .hotspot {
+                    flex: 60%;
+
+                    .lecture {
+                        a {
+                            color: blue;
+                        }
+
+                        dt {
+                            font-size: (12rem / @fontsize);
+                            position: relative;
+                            height: (30rem / @fontsize);
+                            font-weight: 700;
+                            line-height: (30rem / @fontsize);
+
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                width: (5rem / @fontsize);
+                                height: (10rem / @fontsize);
+                                top: (10rem / @fontsize);
+                                left: 0;
+                                background-color: #1c6ec2;
+                                border-radius: 50%;
+
+                            }
+
+                            span {
+                                padding-left: (8rem / @fontsize);
+                            }
+
+                        }
+
+                        dd {
+
+                            // background: url(../uploads/lecture.jpg) no-repeat;
+                            // width: 233px;
+                            // height: 140px;
+
+                            img {
+                                width: 100%;
+                                // height: 100%;
+                            }
+                        }
+
+                        h3 {
+                            font-size: (12rem / @fontsize);
+                            text-align: center;
+                            line-height: (20rem / @fontsize);
+
+                            a {
+                                display: inline-block;
+                                width: 70%;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                            }
+                        }
+
+                        p {
+                            text-indent: 2em;
+                            line-height: (20rem / @fontsize);
+
+                        }
+                    }
+                }
+
+                .service {
+                    flex: 40%;
+                    background-color: #f3f1f1;
+
+                    .service-nav {
+                        height: (25rem / @fontsize);
+                        padding-left: (10rem / @fontsize);
+                        font-weight: 700;
+                        background-color: #2071c3;
+                        line-height: (25rem / @fontsize);
+                        color: #fff;
+                    }
+
+                    .service-items {
+                        display: flex;
+                        box-sizing: border-box;
+                        flex-flow: row wrap;
+                        align-content: flex-start;
+                        padding: (10rem / @fontsize) 0 0 (10rem / @fontsize);
+                        height: (165.6rem / @fontsize);
+
+                        li {
+                            position: relative;
+                            box-sizing: border-box;
+                            padding-left: (30rem / @fontsize);
+                            list-style: none;
+                            flex: 50%;
+                            height: (25rem / @fontsize);
+                            line-height: (25rem / @fontsize);
+
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                top: (2.5rem / @fontsize);
+                                left: 0;
+                                width: (20rem / @fontsize);
+                                height: (20rem / @fontsize);
+                                background: url(../img/fw02.gif) no-repeat;
+                                background-size: 100% 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer {
+            flex: 10%;
+            display: flex;
+            padding: 0 (5rem / @fontsize);
+
+            .nav-left {
+                flex: 35%;
+                display: flex;
+                text-align: center;
+
+
+                a {
+                    flex: 1;
+                    height: (30rem / @fontsize);
+                    line-height: (30rem / @fontsize);
+                    box-sizing: border-box;
+                    border: (1rem / @fontsize) solid #ccc;
+                    color: #000;
+                }
+            }
+
+            .nav-right {
+                flex: 65%;
+
+                ul {
+                    height: (25rem / @fontsize);
+                    margin-top: (15rem / @fontsize);
+                    background: url(../img/bg1.gif) no-repeat;
+                    background-size: 100% 100%;
+                    display: flex;
+
+                    li {
+                        flex: 1;
+                        text-align: center;
+
+                        a {
+                            line-height: (25rem / @fontsize);
+                            font-weight: 700;
+                        }
+
+                        &:nth-child(1) {
+                            a {
+                                color: #3587d9;
+
+                                &::before {
+                                    content: ">>";
+                                }
+                            }
+                        }
+
+                        &:nth-child(n+2) {
+                            position: relative;
+
+                            a {
+                                &::after {
+                                    content: "";
+                                    position: absolute;
+                                    top: (7rem / @fontsize);
+                                    right: 0;
+                                    width: 0px;
+                                    height: (10rem / @fontsize);
+                                    border: (1rem / @fontsize) solid #fff;
+                                    background-color: #fff;
+
+                                }
+                            }
+                        }
+
+                        &:last-child {
+                            a {
+                                &::after {
+                                    border: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .end {
+        box-sizing: border-box;
+        padding-top: (10rem / @fontsize);
+        height: (50rem / @fontsize);
+        text-align: center;
+        line-height: (16rem / @fontsize);
+        color: #555;
+    }
+}
